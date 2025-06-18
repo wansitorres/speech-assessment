@@ -1,9 +1,9 @@
-FROM runpod/base:0.4.0-cuda11.8
+FROM python:3.10-slim
 
 # Set working directory
 WORKDIR /
 
-# Install system dependencies for audio processing
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
     ffmpeg \
     libsndfile1 \
@@ -17,8 +17,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY src/ ./src/
 COPY handler.py .
 
-# Set environment variable placeholder (will be overridden by RunPod)
-ENV HUGGINGFACE_TOKEN=""
+# Set environment variable placeholder
 
 # Command to run the handler
 CMD ["python", "-u", "handler.py"]
