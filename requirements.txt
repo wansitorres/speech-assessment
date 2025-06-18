@@ -1,0 +1,17 @@
+runpod
+torch
+transformers
+librosa
+soundfile
+numpy
+noisereduce
+pyannote.audio
+audio-separator
+SpeechRecognition
+onnxruntime
+pydub
+ffmpeg-python
+pytorch-lightning
+asteroid-filterbanks
+speechbrain
+huggingface_hub
